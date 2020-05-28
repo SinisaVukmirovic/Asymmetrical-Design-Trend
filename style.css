@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bgDark: #222;
+    --bgLight: #444;
+    --accentClr: #2ffefe;
+    --textPrimary: #ddd;
+    --textSecondary: #aaa;
+}
+
+/* mobile first approach */
+body {
+    margin: 1rem;
+    background-color: var(--bgDark);
+    color: var(--textPrimary);
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+.title {
+    color: var(--accentClr);
+    text-transform: uppercase;
+    margin: 0;
+
+    /* clamp value for font size property */
+                   /* min, mid, max */
+    font-size: clamp(2rem, 7vw, 5rem);
+}
