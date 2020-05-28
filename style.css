@@ -25,6 +25,32 @@ img {
     max-width: 100%;
 }
 
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: .5rem;
+    position: relative;
+}
+    .btn::before {
+        content: '';
+        position: absolute;
+        background: var(--accentClr);
+        opacity: .5;
+        height: .75rem;
+        width: 75%;
+        z-index: -1;
+        transform-origin: top left;
+        transition: transform 250ms ease-in-out;
+    }
+    .btn:hover::before,
+    .btn:focus::before {
+        transform: scale(1.25, 2);
+    }
+
 .title {
     color: var(--accentClr);
     text-transform: uppercase;
@@ -34,3 +60,67 @@ img {
                    /* min, mid, max */
     font-size: clamp(2rem, 7vw, 5rem);
 }
+
+.subtitle {
+    color: var(--accentClr);
+    opacity: .5;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--accentClr);
+    opacity: .5;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--textPrimary);
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: color 500ms ease-in-out;
+}
+    .nav-link:hover,
+    .nav-link:focus {
+        color: var(--accentClr);
+    }
+
+.skills {
+    display: flex;
+    /* gap property is currently supported only in Firefox */
+    gap: 2rem;
+    justify-content: flex-start;
+}
+    .skills img {
+        margin: .5rem auto;
+        width: 25%;
+    }
+
+footer {
+    margin-top: 2rem;
+}
+
+.social-links i {
+    color: var(--accentClr);
+    opacity: .5;
+    font-size: 3rem;
+    margin: .5rem;
+    transition: opacity 500ms ease-in-out;
+}
+    .social-links i:hover {
+        opacity: 1;
+    }
