@@ -21,7 +21,7 @@ body {
     line-height: 1.5;
 }
 
-img {
+.big-img {
     max-width: 100%;
 }
 
@@ -34,6 +34,8 @@ img {
     font-size: 1.25rem;
     padding: .5rem;
     position: relative;
+    align-self: start;
+    justify-self: start;
 }
     .btn::before {
         content: '';
@@ -102,13 +104,13 @@ nav {
 .skills {
     display: flex;
     /* gap property is currently supported only in Firefox */
-    gap: 2rem;
-    justify-content: flex-start;
+    gap: 1rem;
+    
 }
-    .skills img {
+    /* .skills img {
         margin: .5rem auto;
         width: 25%;
-    }
+    } */
 
 footer {
     margin-top: 2rem;
@@ -124,3 +126,40 @@ footer {
     .social-links i:hover {
         opacity: 1;
     }
+
+@media (min-width: 800px) {
+    body {
+        margin: 0;
+    }
+    .main-grid {
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) 
+                               repeat(3, minmax(10rem, 30rem)) 
+                               minmax(1rem, 1fr);
+        gap: 2rem;
+    }
+    header {
+        grid-column: 2 / 5;
+    }
+    main {
+        grid-column: 2 / -1;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-auto-flow: dense;
+    }
+    title {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .big-img {
+        grid-column: 2 / -1;
+        grid-row: 1 / 4;
+        z-index: -1;
+    }
+    .skills {
+        grid-column: 2 / 3;
+    }
+    footer {
+        grid-column: 2 / 3;
+    }
+}
