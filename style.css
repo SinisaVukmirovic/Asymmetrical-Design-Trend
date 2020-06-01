@@ -21,7 +21,6 @@ body {
     margin: 1rem;
     background-color: var(--bgDark);
     color: var(--textPrimary);
-    font-family: sans-serif;
     line-height: 1.5;
 }
 
@@ -66,7 +65,7 @@ img {
 
     /* clamp value for font size property */
                    /* min, mid, max */
-    font-size: clamp(2rem, 7vw, 7rem);
+    font-size: clamp(2rem, 7vw, 6rem);
 }
 
 .subtitle {
@@ -97,6 +96,7 @@ nav {
 .nav-link {
     color: var(--textPrimary);
     text-transform: capitalize;
+    font-size: 1.25rem;
     text-decoration: none;
     transition: color 500ms ease-in-out;
 }
@@ -124,7 +124,7 @@ nav {
     }
 
 .description {
-    padding-right: 1rem;
+    font-size: 1.25rem;
 }
 
 footer {
@@ -191,6 +191,9 @@ footer {
     }
     .subtitle {
         font-size: 2.5rem;
+    }
+    .description {
+        padding-right: 1rem;
     }
     .big-img {
         grid-column: 2 / -1;
