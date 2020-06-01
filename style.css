@@ -5,9 +5,10 @@
 }
 
 :root {
-    --bgDark: #222;
-    --bgLight: #444;
-    --accentClr: #2ffefe;
+    --bgDark: #0c0f16;
+    --bgLight: #0e2531;
+    --accentClr: #2dabaa;
+    --highlight: #65feff;
     --textPrimary: #ddd;
     --textSecondary: #aaa;
 }
@@ -69,10 +70,9 @@ img {
 }
 
 .subtitle {
-    color: var(--accentClr);
-    opacity: .5;
+    color: var(--highlight);
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 2rem;
 }
 
@@ -84,8 +84,7 @@ header {
 
 .logo {
     font-size: 2rem;
-    color: var(--accentClr);
-    opacity: .5;
+    color: var(--highlight);
 }
 
 nav {
@@ -103,7 +102,7 @@ nav {
 }
     .nav-link:hover,
     .nav-link:focus {
-        color: var(--accentClr);
+        color: var(--highlight);
     }
 
 .skills {
@@ -130,10 +129,11 @@ nav {
 
 footer {
     margin-top: 2rem;
+    text-align: center;
 }
 
 .social-links i {
-    color: var(--accentClr);
+    color: var(--highlight);
     opacity: .5;
     font-size: 3rem;
     margin: .5rem;
@@ -207,6 +207,7 @@ footer {
     }
     footer {
         grid-column: 2 / 3;
+        text-align: left;
     }
 }
 
