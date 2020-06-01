@@ -13,6 +13,9 @@
 }
 
 /* mobile first approach */
+html {
+    font-size: 12px;
+}
 body {
     margin: 1rem;
     background-color: var(--bgDark);
@@ -62,14 +65,14 @@ img {
 
     /* clamp value for font size property */
                    /* min, mid, max */
-    font-size: clamp(2rem, 7vw, 6rem);
+    font-size: clamp(2rem, 7vw, 7rem);
 }
 
 .subtitle {
     color: var(--accentClr);
     opacity: .5;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -104,16 +107,26 @@ nav {
     }
 
 .skills {
-    display: flex;
+    /* display: flex;
+    flex-wrap: wrap; */
     /* gap property is currently supported only in Firefox */
-    gap: 1rem;
-    margin-top: 3rem;
-    
+    /* gap: 1rem;
+    margin-top: 2rem; */
+
+    /* ============ */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin: 1rem auto;
 }
-    /* .skills img {
-        margin: .5rem auto;
-        width: 25%;
-    } */
+    .skills img {
+        margin: 1rem;
+    }
+
+.description {
+    padding-right: 1rem;
+}
 
 footer {
     margin-top: 2rem;
@@ -131,6 +144,9 @@ footer {
     }
 
 @media (min-width: 800px) {
+    html {
+        font-size: 14px;
+    }
     body {
         margin: 0;
     }
@@ -173,6 +189,9 @@ footer {
         grid-column: 1 / 3;
         grid-row: 1;
     }
+    .subtitle {
+        font-size: 2.5rem;
+    }
     .big-img {
         grid-column: 2 / -1;
         grid-row: 1 / span 4;
@@ -183,7 +202,8 @@ footer {
         object-fit: cover;
     }
     .skills {
-        grid-column: 2 / 3;
+        grid-column: 2 / 4;
+        grid-template-columns: repeat(4, 1fr);
     }
     footer {
         grid-column: 2 / 3;
@@ -191,6 +211,9 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
     main::after {
         grid-column: 3 / 4;
     }
