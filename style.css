@@ -195,6 +195,16 @@ footer {
     .description {
         padding-right: 1rem;
     }
+        .description::after {
+            content: "01";
+            font-size: 50vw;
+            position: absolute;
+            color: var(--bgLight);
+            z-index: -100;
+            line-height: 1;
+            left: -5rem;
+            top: 0;
+        }
     .big-img {
         grid-column: 2 / -1;
         grid-row: 1 / span 4;
